@@ -1,0 +1,26 @@
+{
+  "name": "threetides",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "fmt": "oxfmt",
+    "lint": "oxlint --deny-warnings",
+    "type-check": "tsc --noEmit --pretty",
+    "check": "bun run fmt && bun run lint && bun run type-check"
+  },
+  "dependencies": {
+    "astro": "^6.3.7"
+  },
+  "devDependencies": {
+    "oxfmt": "^0.50.0",
+    "oxlint": "^1.66.0",
+    "typescript": "~6.0.3"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}
