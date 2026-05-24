@@ -13,6 +13,7 @@
     "check": "bun run fmt && bun run lint && bun run type-check"
   },
   "dependencies": {
+    "@threetides/bekk": "^0.1.1",
     "astro": "^6.3.7"
   },
   "devDependencies": {
