@@ -13,8 +13,13 @@
     "check": "bun run fmt && bun run lint && bun run type-check"
   },
   "dependencies": {
+    "@astrojs/react": "^5.0.5",
     "@threetides/bekk": "^0.1.1",
-    "astro": "^6.3.7"
+    "@types/react": "^19.2.15",
+    "@types/react-dom": "^19.2.3",
+    "astro": "^6.3.7",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
   },
   "devDependencies": {
     "oxfmt": "^0.50.0",
