@@ -4,7 +4,7 @@ import type { FC } from "react"
 export const FontSelect: FC = () => {
   return (
     <Select.Root>
-      <Select.Trigger placeholder="Pick a font" className="test"/>
+      <Select.Trigger placeholder="Pick a font" className="test" />
       <Select.Content>
         <Select.Item value="sans">Sans-serif</Select.Item>
         <Select.Item value="serif">Serif</Select.Item>
