@@ -2,6 +2,17 @@
   "name": "threetides",
   "version": "0.0.1",
   "type": "module",
+  "private": true,
+  "license": "MIT",
+  "author": "threetides",
+  "homepage": "https://github.com/threetides/threetides#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/threetides/threetides.git"
+  },
+  "bugs": {
+    "url": "https://github.com/threetides/threetides/issues"
+  },
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
