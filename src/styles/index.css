@@ -1,3 +1,16 @@
-.test {
-  max-width: 256px;
+.hero {
+  display: flex;
+  justify-content: center;
+  padding-top: var(--spacing-16);
+
+  h1 {
+    text-align: center;
+    font-size: clamp(var(--font-size-4xl), 10vw, var(--font-size-6xl));
+    font-weight: var(--font-weight-medium);
+    background-image: linear-gradient(to bottom, var(--color-text-primary), var(--color-accent-bg));
+    -webkit-background-clip: text; /* Required for Chrome, Safari, and Edge */
+    background-clip: text;
+    -webkit-text-fill-color: transparent; /* Common for wider support */
+    color: transparent;
+  }
 }
