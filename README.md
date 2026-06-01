@@ -3,9 +3,7 @@
 The home of the threetides studio.
 
 `threetides` is the studio's website, a static site built with
-[Astro](https://astro.build) and the studio's own
-[`@threetides/bekk`](https://www.npmjs.com/package/@threetides/bekk) component
-library.
+[Astro](https://astro.build).
 
 ## Development
 
@@ -38,9 +36,6 @@ threetides/
 ├── astro.config.mjs
 └── package.json
 ```
-
-The site pulls in bekk's styles and components directly so the design language
-stays consistent between the library and the website.
 
 ## License
 
