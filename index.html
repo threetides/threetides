@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Threetides</title>
     <script>
-      // Apply dark mode before first paint to avoid a light flash on reload.
-      // Must match the key used by darkModeAtom in src/store/state.ts.
       try {
         if (JSON.parse(localStorage.getItem("darkMode")) === true) {
           document.documentElement.classList.add("dark")
