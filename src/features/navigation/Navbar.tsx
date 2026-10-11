@@ -1,5 +1,5 @@
 import type { FC } from "react"
-import favicon from "/favicon.svg"
+import threetides from "@/assets/threetides.svg"
 import { Button } from "@/components/ui/button"
 import { Moon, Sun } from "lucide-react"
 import { useAtom } from "jotai"
@@ -12,7 +12,7 @@ export const Navbar: FC = () => {
     <nav className="border-b border-sidebar">
       <div className="flex items-center p-6 justify-between max-w-5xl m-auto">
         <div className="flex items-center gap-2">
-          <img src={favicon} alt="Threetides favicon" className="h-8" />
+          <img src={threetides} alt="Threetides favicon" className="h-8" />
           <span className="text-xl">Threetides</span>
         </div>
         <Button variant="outline" size="icon" onClick={() => setDarkMode(!darkMode)}>
