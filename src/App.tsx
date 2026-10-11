@@ -4,8 +4,8 @@ import { useAtomValue } from "jotai"
 import { darkModeAtom } from "./store/state"
 import { Button } from "./components/ui/button"
 import { Separator } from "./components/ui/separator"
-import multe from "@/assets/multe.svg"
 import { ExternalLink } from "lucide-react"
+import multe from "@/assets/multe.svg"
 
 export const App: FC = () => {
   const darkMode = useAtomValue(darkModeAtom)
@@ -51,7 +51,7 @@ export const App: FC = () => {
             <a
               href="https://multe.app"
               target="_blank"
-              className="flex flex-col gap-4 p-4 border rounded-lg bg-card"
+              className="group theme-multe flex flex-col gap-4 p-4 border rounded-lg bg-card hover:border-chart-3 transition duration-250 ease-in-out"
             >
               <span className="flex justify-between items-center">
                 <img src={multe} alt="Multe logo" />
@@ -67,7 +67,7 @@ export const App: FC = () => {
               </span>
               <span className="flex justify-between items-center">
                 <p className="text-xs text-muted-foreground">multe.app</p>
-                <ExternalLink className="h-4 text-muted-foreground" />
+                <ExternalLink className="h-4 text-muted-foreground group-hover:text-chart-3 transition duration-250 ease-in-out" />
               </span>
             </a>
           </div>
