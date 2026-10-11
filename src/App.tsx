@@ -4,6 +4,8 @@ import { useAtomValue } from "jotai"
 import { darkModeAtom } from "./store/state"
 import { Button } from "./components/ui/button"
 import { Separator } from "./components/ui/separator"
+import multe from "@/assets/multe.svg"
+import { ExternalLink } from "lucide-react"
 
 export const App: FC = () => {
   const darkMode = useAtomValue(darkModeAtom)
@@ -38,10 +40,37 @@ export const App: FC = () => {
           </div>
         </div>
         <Separator />
-        <section className="p-6">
-          <h2 className="text-3xl" id="projects">
-            Projects
-          </h2>
+        <section className="p-6 flex flex-col gap-8">
+          <div className="flex flex-col gap-2">
+            <h2 className="text-3xl" id="projects">
+              Projects
+            </h2>
+            <p className="text-muted-foreground text-sm">Some apps, some developer tools.</p>
+          </div>
+          <div className="grid">
+            <a
+              href="https://multe.app"
+              target="_blank"
+              className="flex flex-col gap-4 p-4 border rounded-lg bg-card"
+            >
+              <span className="flex justify-between items-center">
+                <img src={multe} alt="Multe logo" />
+                <div className="font-light text-xs text-muted-foreground border pb-1 pt-1 pl-2 pr-2 rounded-full [text-box-trim:both] [text-box-edge:cap_alphabetic] text-center">
+                  App
+                </div>
+              </span>
+              <span className="flex flex-col gap-2">
+                <h3 className="text-2xl">Multe</h3>
+                <p className="text-sm text-muted-foreground">
+                  Keep track of your collections, from wishlist to owned.
+                </p>
+              </span>
+              <span className="flex justify-between items-center">
+                <p className="text-xs text-muted-foreground">multe.app</p>
+                <ExternalLink className="h-4 text-muted-foreground" />
+              </span>
+            </a>
+          </div>
         </section>
       </main>
     </div>
