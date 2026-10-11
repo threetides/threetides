@@ -9,6 +9,7 @@ import multe from "@/assets/multe.svg"
 import havelle from "@/assets/havelle.svg"
 import tideauth from "@/assets/tideauth.svg"
 import gonet from "@/assets/gonet.svg"
+import { Footer } from "./features/navigation/Footer"
 
 export const App: FC = () => {
   const darkMode = useAtomValue(darkModeAtom)
@@ -37,9 +38,7 @@ export const App: FC = () => {
           </p>
           <div className="grid w-fit grid-flow-col auto-cols-fr gap-2">
             <Button size="lg" render={<a href="#projects">See the projects</a>} />
-            <Button variant="link" size="lg">
-              About the name
-            </Button>
+            <Button variant="link" size="lg" render={<a href="#about-name">About the name</a>} />
           </div>
         </div>
         <Separator />
@@ -156,7 +155,26 @@ export const App: FC = () => {
             </a>
           </div>
         </section>
+        <Separator />
+        <section id="about-name" className="flex flex-col gap-8">
+          <div className="grid gap-4 sm:grid-cols-2">
+            <h3 className="text-2xl" id="projects">
+              About the name
+            </h3>
+            <div className="flex flex-col gap-8">
+              <i className="text-muted-foreground">
+                When the Moon rose in the Third Northern Hall I went to the Ninth Vestibule to
+                witness the joining of three Tides.
+              </i>
+              <p className="text-muted-foreground text-sm font-light">
+                Susanna Clarke, <i>Piranesi</i>
+              </p>
+            </div>
+          </div>
+        </section>
+        <Separator />
       </main>
+      <Footer />
     </div>
   )
 }
