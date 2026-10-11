@@ -111,7 +111,7 @@ export const App: FC = () => {
                   </div>
                 </span>
                 <span className="flex flex-col gap-2">
-                  <h3 className="text-2xl">Tideauth</h3>
+                  <h3 className="text-2xl">TideAuth</h3>
                   <p className="text-sm text-muted-foreground">
                     Session-based authentication you can add to any service.
                   </p>
