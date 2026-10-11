@@ -1,7 +1,5 @@
 import type { FC } from "react"
 import threetides from "@/assets/threetides.svg"
-import { Button } from "@/components/ui/button"
-import { GitBranch, Mail } from "lucide-react"
 
 const currentDate = new Date()
 const currentYear = currentDate.getFullYear()
