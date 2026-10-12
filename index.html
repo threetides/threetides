@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Threetides</title>
     <script>
-      history.scrollRestoration = "manual"
       const stored = localStorage.getItem("darkMode")
       if (stored !== null) {
         document.documentElement.dataset.theme = JSON.parse(stored) ? "dark" : "light"
