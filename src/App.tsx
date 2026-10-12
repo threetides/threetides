@@ -12,6 +12,7 @@ import { Gonet } from "@/assets/Gonet"
 import { Linkedin } from "@/assets/Linkedin"
 import { Github } from "@/assets/Github"
 import { Mail } from "@/assets/Mail"
+import PatternWaves from "@/components/PatternWaves"
 
 export const App: FC = () => {
   const darkMode = useAtomValue(darkModeAtom)
@@ -49,6 +50,22 @@ export const App: FC = () => {
                 <Mail aria-label="mail icon link" className="h-8 w-8 text-foreground" />
               </a>
             </div>
+          </div>
+          <div className="relative h-72 md:h-full">
+            <PatternWaves
+              className="dark:hidden"
+              preset="silk"
+              color="#00598a"
+              backgroundColor="transparent"
+              fade="edges"
+            />
+            <PatternWaves
+              className="hidden dark:block"
+              preset="silk"
+              color="#38bdf8"
+              backgroundColor="transparent"
+              fade="edges"
+            />
           </div>
         </div>
         <Separator />

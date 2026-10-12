@@ -1,0 +1,14 @@
+.pattern-waves {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* ogl sets a fixed px size inline; keep the canvas out of flow so it never props the container open */
+.pattern-waves > canvas {
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
