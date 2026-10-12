@@ -9,6 +9,8 @@ import multe from "@/assets/multe.svg"
 import havelle from "@/assets/havelle.svg"
 import tideauth from "@/assets/tideauth.svg"
 import gonet from "@/assets/gonet.svg"
+import linkedIn from "@/assets/linkedin.svg"
+import github from "@/assets/github.svg"
 
 export const App: FC = () => {
   const darkMode = useAtomValue(darkModeAtom)
@@ -36,6 +38,18 @@ export const App: FC = () => {
               Threetides is an independent studio and a home for everything I build, from apps to
               developer tools. Made with love in Norway.
             </p>
+            <div className="flex gap-4">
+              <a
+                href="https://github.com/threetides"
+                target="_blank"
+                className="text-primary-foreground"
+              >
+                <img src={github} alt="github icon link" className="h-8" />
+              </a>
+              <a href="https://www.linkedin.com/in/jonas-lillebø-haugen-6a442222a" target="_blank">
+                <img src={linkedIn} alt="linkedin icon link" className="h-8" />
+              </a>
+            </div>
           </div>
         </div>
         <Separator />
