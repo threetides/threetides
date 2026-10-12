@@ -4,11 +4,11 @@ import { useAtomValue } from "jotai"
 import { darkModeAtom } from "./store/state"
 import { Separator } from "./components/ui/separator"
 import { ExternalLink } from "lucide-react"
+import { Footer } from "./features/navigation/Footer"
 import multe from "@/assets/multe.svg"
 import havelle from "@/assets/havelle.svg"
 import tideauth from "@/assets/tideauth.svg"
 import gonet from "@/assets/gonet.svg"
-import { Footer } from "./features/navigation/Footer"
 
 export const App: FC = () => {
   const darkMode = useAtomValue(darkModeAtom)
