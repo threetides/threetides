@@ -5,12 +5,12 @@ import { darkModeAtom } from "./store/state"
 import { Separator } from "./components/ui/separator"
 import { ExternalLink } from "lucide-react"
 import { Footer } from "./features/navigation/Footer"
-import multe from "@/assets/multe.svg"
-import havelle from "@/assets/havelle.svg"
-import tideauth from "@/assets/tideauth.svg"
-import gonet from "@/assets/gonet.svg"
-import linkedIn from "@/assets/linkedin.svg"
-import github from "@/assets/github.svg"
+import { Multe } from "@/assets/Multe"
+import { Havelle } from "@/assets/Havelle"
+import { Tideauth } from "@/assets/Tideauth"
+import { Gonet } from "@/assets/Gonet"
+import { Linkedin } from "@/assets/Linkedin"
+import { Github } from "@/assets/Github"
 
 export const App: FC = () => {
   const darkMode = useAtomValue(darkModeAtom)
@@ -39,15 +39,11 @@ export const App: FC = () => {
               developer tools. Made with love in Norway.
             </p>
             <div className="flex gap-4">
-              <a
-                href="https://github.com/threetides"
-                target="_blank"
-                className="text-primary-foreground"
-              >
-                <img src={github} alt="github icon link" className="h-8" />
+              <a href="https://github.com/threetides" target="_blank">
+                <Github aria-label="github icon link" className="h-8 w-8 text-foreground" />
               </a>
               <a href="https://www.linkedin.com/in/jonas-lillebø-haugen-6a442222a" target="_blank">
-                <img src={linkedIn} alt="linkedin icon link" className="h-8" />
+                <Linkedin aria-label="linkedin icon link" className="h-8 w-8 text-foreground" />
               </a>
             </div>
           </div>
@@ -69,7 +65,7 @@ export const App: FC = () => {
               <div className="bg-[radial-gradient(420px_circle_at_0%_0%,color-mix(in_oklch,var(--chart-3)_14%,transparent),transparent_70%)] absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out"></div>
               <div className="z-1 flex flex-col gap-4">
                 <span className="flex justify-between items-center">
-                  <img src={multe} alt="Multe logo" />
+                  <Multe aria-label="Multe logo" />
                   <div className="font-light text-xs text-muted-foreground border pb-1 pt-1 pl-2 pr-2 rounded-full [text-box-trim:both] [text-box-edge:cap_alphabetic] text-center">
                     App
                   </div>
@@ -95,7 +91,7 @@ export const App: FC = () => {
               <div className="bg-[radial-gradient(420px_circle_at_0%_0%,color-mix(in_oklch,var(--chart-3)_14%,transparent),transparent_70%)] absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out"></div>
               <div className="z-1 flex flex-col gap-4">
                 <span className="flex justify-between items-center">
-                  <img src={havelle} alt="Havelle logo" />
+                  <Havelle aria-label="Havelle logo" />
                   <div className="font-light text-xs text-muted-foreground border pb-1 pt-1 pl-2 pr-2 rounded-full [text-box-trim:both] [text-box-edge:cap_alphabetic] text-center">
                     App
                   </div>
@@ -121,7 +117,7 @@ export const App: FC = () => {
               <div className="bg-[radial-gradient(420px_circle_at_0%_0%,color-mix(in_oklch,var(--chart-3)_14%,transparent),transparent_70%)] absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out"></div>
               <div className="z-1 flex flex-col gap-4">
                 <span className="flex justify-between items-center">
-                  <img src={tideauth} alt="Tideauth logo" />
+                  <Tideauth aria-label="Tideauth logo" />
                   <div className="font-light text-xs text-muted-foreground border pb-1 pt-1 pl-2 pr-2 rounded-full [text-box-trim:both] [text-box-edge:cap_alphabetic] text-center">
                     Go Library
                   </div>
@@ -147,7 +143,7 @@ export const App: FC = () => {
               <div className="bg-[radial-gradient(420px_circle_at_0%_0%,color-mix(in_oklch,var(--chart-3)_14%,transparent),transparent_70%)] absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out"></div>
               <div className="z-1 flex flex-col gap-4">
                 <span className="flex justify-between items-center">
-                  <img src={gonet} alt="Gonet logo" />
+                  <Gonet aria-label="Gonet logo" />
                   <div className="font-light text-xs text-muted-foreground border pb-1 pt-1 pl-2 pr-2 rounded-full [text-box-trim:both] [text-box-edge:cap_alphabetic] text-center">
                     Command line tool
                   </div>
