@@ -39,14 +39,27 @@ export const App: FC = () => {
               developer tools. Made with love in Norway.
             </p>
             <div className="flex gap-4">
-              <a href="https://github.com/threetides" target="_blank">
-                <Github aria-label="github icon link" className="h-8 w-8 text-foreground" />
+              <a href="https://github.com/threetides" target="_blank" className="group">
+                <Github
+                  aria-label="github icon link"
+                  className="h-8 w-8 text-muted-foreground group-hover:text-foreground transition duration-150 ease-in-out"
+                />
               </a>
-              <a href="https://www.linkedin.com/in/jonas-lillebø-haugen-6a442222a" target="_blank">
-                <Linkedin aria-label="linkedin icon link" className="h-8 w-8 text-foreground" />
+              <a
+                href="https://www.linkedin.com/in/jonas-lillebø-haugen-6a442222a"
+                target="_blank"
+                className="group"
+              >
+                <Linkedin
+                  aria-label="linkedin icon link"
+                  className="h-8 w-8 text-muted-foreground group-hover:text-foreground transition duration-150 ease-in-out"
+                />
               </a>
-              <a href="mailto:hello@threetides.dev">
-                <Mail aria-label="mail icon link" className="h-8 w-8 text-foreground" />
+              <a href="mailto:hello@threetides.dev" className="group">
+                <Mail
+                  aria-label="mail icon link"
+                  className="h-8 w-8 text-muted-foreground group-hover:text-foreground transition duration-150 ease-in-out"
+                />
               </a>
             </div>
           </div>
@@ -171,7 +184,7 @@ export const App: FC = () => {
             <h3 className="text-2xl" id="projects">
               About the name
             </h3>
-            <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-2">
               <i className="text-muted-foreground">
                 When the Moon rose in the Third Northern Hall I went to the Ninth Vestibule to
                 witness the joining of three Tides.
