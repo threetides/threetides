@@ -26,15 +26,17 @@ export const App: FC = () => {
     <div>
       <Navbar />
       <main className="flex flex-col gap-10 mt-10 max-w-5xl m-auto p-6">
-        <div className="flex flex-col gap-8">
-          <h1 className="text-4xl font-bold flex flex-col">
-            Open-source projects and small obsessions.
-            <span className="text-muted-foreground">Lightweight and opinionated.</span>
-          </h1>
-          <p className="text-muted-foreground leading-relaxed">
-            Threetides is an independent studio and a home for everything I build, from apps to
-            developer tools. Made with love in Norway.
-          </p>
+        <div className="grid gap-4 md:grid-cols-2">
+          <div className="flex flex-col gap-8">
+            <h1 className="text-4xl font-bold flex flex-col">
+              Open-source projects and small obsessions.
+              <span className="text-muted-foreground">Lightweight and opinionated.</span>
+            </h1>
+            <p className="text-muted-foreground leading-relaxed">
+              Threetides is an independent studio and a home for everything I build, from apps to
+              developer tools. Made with love in Norway.
+            </p>
+          </div>
         </div>
         <Separator />
         <section className="flex flex-col gap-8">
