@@ -1,5 +1,5 @@
 import { atomWithStorage } from "jotai/utils"
 
-export const darkModeAtom = atomWithStorage<boolean>("darkMode", true, undefined, {
+export const darkModeAtom = atomWithStorage<boolean | null>("darkMode", null, undefined, {
   getOnInit: true
 })

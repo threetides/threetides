@@ -15,8 +15,15 @@ export const Navbar: FC = () => {
           <Threetides className="h-8 w-8" />
           <span className="text-xl">Threetides</span>
         </div>
-        <Button variant="outline" size="icon" onClick={() => setDarkMode(!darkMode)}>
-          {darkMode ? <Sun /> : <Moon />}
+        <Button
+          variant="outline"
+          size="icon"
+          onClick={() =>
+            setDarkMode(!(darkMode ?? matchMedia("(prefers-color-scheme: dark)").matches))
+          }
+        >
+          <Sun className="hidden dark:block" />
+          <Moon className="dark:hidden" />
         </Button>
       </div>
     </nav>

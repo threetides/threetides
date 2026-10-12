@@ -6,11 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Threetides</title>
     <script>
-      try {
-        if (JSON.parse(localStorage.getItem("darkMode")) === true) {
-          document.documentElement.classList.add("dark")
-        }
-      } catch {}
+      const stored = localStorage.getItem("darkMode")
+      if (stored !== null) {
+        document.documentElement.dataset.theme = JSON.parse(stored) ? "dark" : "light"
+      }
     </script>
   </head>
 

@@ -11,16 +11,16 @@ import { Tideauth } from "@/assets/Tideauth"
 import { Gonet } from "@/assets/Gonet"
 import { Linkedin } from "@/assets/Linkedin"
 import { Github } from "@/assets/Github"
+import { Mail } from "@/assets/Mail"
 
 export const App: FC = () => {
   const darkMode = useAtomValue(darkModeAtom)
 
   useEffect(() => {
-    const html = document.querySelector("html")
-    if (darkMode) {
-      html?.classList.add("dark")
+    if (darkMode === null) {
+      delete document.documentElement.dataset.theme
     } else {
-      html?.classList.remove("dark")
+      document.documentElement.dataset.theme = darkMode ? "dark" : "light"
     }
   }, [darkMode])
 
@@ -44,6 +44,9 @@ export const App: FC = () => {
               </a>
               <a href="https://www.linkedin.com/in/jonas-lillebø-haugen-6a442222a" target="_blank">
                 <Linkedin aria-label="linkedin icon link" className="h-8 w-8 text-foreground" />
+              </a>
+              <a href="mailto:hello@threetides.dev">
+                <Mail aria-label="mail icon link" className="h-8 w-8 text-foreground" />
               </a>
             </div>
           </div>
