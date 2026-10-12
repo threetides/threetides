@@ -58,7 +58,7 @@
 }
 
 :root {
-  color-scheme: light dark; /* follow the OS by default */
+  color-scheme: light dark;
 
   --background: light-dark(oklch(1 0 0), oklch(0.141 0.005 285.823));
   --foreground: light-dark(oklch(0.141 0.005 285.823), oklch(0.985 0 0));
@@ -94,9 +94,15 @@
   --sidebar-ring: light-dark(oklch(0.705 0.015 286.067), oklch(0.552 0.016 285.938));
 }
 
-:root { color-scheme: light dark; }
-:root[data-theme="light"] { color-scheme: light; }
-:root[data-theme="dark"]  { color-scheme: dark; }
+:root {
+  color-scheme: light dark;
+}
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+}
 
 @layer base {
   * {
