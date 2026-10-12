@@ -135,7 +135,7 @@ export const App: FC = () => {
                 <span className="flex justify-between items-center">
                   <Tideauth aria-label="Tideauth logo" />
                   <div className="font-light text-xs text-muted-foreground border pb-1 pt-1 pl-2 pr-2 rounded-full [text-box-trim:both] [text-box-edge:cap_alphabetic] text-center">
-                    Go Library
+                    Library
                   </div>
                 </span>
                 <span className="flex flex-col gap-2">
@@ -161,7 +161,7 @@ export const App: FC = () => {
                 <span className="flex justify-between items-center">
                   <Gonet aria-label="Gonet logo" />
                   <div className="font-light text-xs text-muted-foreground border pb-1 pt-1 pl-2 pr-2 rounded-full [text-box-trim:both] [text-box-edge:cap_alphabetic] text-center">
-                    Command line tool
+                    CLI
                   </div>
                 </span>
                 <span className="flex flex-col gap-2">
