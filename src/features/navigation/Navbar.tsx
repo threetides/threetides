@@ -3,6 +3,7 @@ import { Monitor, Moon, Sun } from "lucide-react"
 import { Threetides } from "@/assets/Threetides"
 import { useTheme, type Theme } from "@/components/theme-provider"
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
 
 export const Navbar: FC = () => {
   const { theme, setTheme } = useTheme()
@@ -27,15 +28,36 @@ export const Navbar: FC = () => {
           value={value}
           onValueChange={(theme) => handleChange(theme[0])}
         >
-          <ToggleGroupItem value="light" aria-label="Toggle light">
-            <Sun />
-          </ToggleGroupItem>
-          <ToggleGroupItem value="dark" aria-label="Toggle dark">
-            <Moon />
-          </ToggleGroupItem>
-          <ToggleGroupItem value="system" aria-label="Toggle system">
-            <Monitor />
-          </ToggleGroupItem>
+          <Tooltip>
+            <TooltipTrigger
+              render={
+                <ToggleGroupItem value="light" aria-label="Toggle light">
+                  <Sun />
+                </ToggleGroupItem>
+              }
+            />
+            <TooltipContent>Light mode</TooltipContent>
+          </Tooltip>
+          <Tooltip>
+            <TooltipTrigger
+              render={
+                <ToggleGroupItem value="dark" aria-label="Toggle dark">
+                  <Moon />
+                </ToggleGroupItem>
+              }
+            />
+            <TooltipContent>Dark mode</TooltipContent>
+          </Tooltip>
+          <Tooltip>
+            <TooltipTrigger
+              render={
+                <ToggleGroupItem value="system" aria-label="Match system">
+                  <Monitor />
+                </ToggleGroupItem>
+              }
+            />
+            <TooltipContent>Match system</TooltipContent>
+          </Tooltip>
         </ToggleGroup>
       </div>
     </nav>
