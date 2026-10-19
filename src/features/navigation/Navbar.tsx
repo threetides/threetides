@@ -1,12 +1,19 @@
-import type { FC } from "react"
-import { Button } from "@/components/ui/button"
-import { Moon, Sun } from "lucide-react"
-import { useAtom } from "jotai"
-import { darkModeAtom } from "@/store/state"
+import { useState, type FC } from "react"
+import { Monitor, Moon, Sun } from "lucide-react"
 import { Threetides } from "@/assets/Threetides"
+import { useTheme, type Theme } from "@/components/theme-provider"
+import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
 
 export const Navbar: FC = () => {
-  const [darkMode, setDarkMode] = useAtom(darkModeAtom)
+  const { theme, setTheme } = useTheme()
+  const [value, setValue] = useState([theme])
+
+  const handleChange = (theme: string | undefined) => {
+    if (theme) {
+      setValue([theme as Theme])
+      setTheme(theme as Theme)
+    }
+  }
 
   return (
     <nav className="border-b border-sidebar">
@@ -15,16 +22,21 @@ export const Navbar: FC = () => {
           <Threetides className="h-8 w-8" />
           <span className="text-xl">Threetides</span>
         </div>
-        <Button
+        <ToggleGroup
           variant="outline"
-          size="icon"
-          onClick={() =>
-            setDarkMode(!(darkMode ?? matchMedia("(prefers-color-scheme: dark)").matches))
-          }
+          value={value}
+          onValueChange={(theme) => handleChange(theme[0])}
         >
-          <Sun className="hidden dark:block" />
-          <Moon className="dark:hidden" />
-        </Button>
+          <ToggleGroupItem value="light" aria-label="Toggle light">
+            <Sun />
+          </ToggleGroupItem>
+          <ToggleGroupItem value="dark" aria-label="Toggle dark">
+            <Moon />
+          </ToggleGroupItem>
+          <ToggleGroupItem value="system" aria-label="Toggle system">
+            <Monitor />
+          </ToggleGroupItem>
+        </ToggleGroup>
       </div>
     </nav>
   )

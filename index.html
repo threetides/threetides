@@ -6,9 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Threetides</title>
     <script>
-      const stored = localStorage.getItem("darkMode")
-      if (stored !== null) {
-        document.documentElement.dataset.theme = JSON.parse(stored) ? "dark" : "light"
+      const theme = localStorage.getItem("theme")
+      if (theme) {
+        if (
+          theme === "dark" ||
+          (theme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches)
+        )
+          document.documentElement.classList.add("dark")
+      } else {
+        document.documentElement.classList.toggle(
+          "dark",
+          window.matchMedia("(prefers-color-scheme: dark)").matches
+        )
       }
     </script>
   </head>

@@ -1,7 +1,5 @@
-import { useEffect, type FC } from "react"
+import { type FC } from "react"
 import { Navbar } from "./features/navigation/Navbar"
-import { useAtomValue } from "jotai"
-import { darkModeAtom } from "./store/state"
 import { Separator } from "./components/ui/separator"
 import { ExternalLink } from "lucide-react"
 import { Footer } from "./features/navigation/Footer"
@@ -14,16 +12,6 @@ import { Github } from "@/assets/Github"
 import { Mail } from "@/assets/Mail"
 
 export const App: FC = () => {
-  const darkMode = useAtomValue(darkModeAtom)
-
-  useEffect(() => {
-    if (darkMode === null) {
-      delete document.documentElement.dataset.theme
-    } else {
-      document.documentElement.dataset.theme = darkMode ? "dark" : "light"
-    }
-  }, [darkMode])
-
   return (
     <div>
       <Navbar />
