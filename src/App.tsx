@@ -10,6 +10,7 @@ import { Gonet } from "@/assets/Gonet"
 import { Linkedin } from "@/assets/Linkedin"
 import { Github } from "@/assets/Github"
 import { Mail } from "@/assets/Mail"
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
 
 export const App: FC = () => {
   return (
@@ -27,28 +28,49 @@ export const App: FC = () => {
               developer tools. Made with love in Norway.
             </p>
             <div className="flex gap-4">
-              <a href="https://github.com/threetides" target="_blank" className="group">
-                <Github
-                  aria-label="github icon link"
-                  className="h-8 w-8 text-muted-foreground group-hover:text-foreground transition duration-150 ease-in-out"
+              <Tooltip>
+                <TooltipTrigger
+                  render={
+                    <a href="https://github.com/threetides" target="_blank" className="group">
+                      <Github
+                        aria-label="github icon link"
+                        className="h-8 w-8 text-muted-foreground group-hover:text-foreground transition duration-150 ease-in-out"
+                      />
+                    </a>
+                  }
                 />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/jonas-lillebø-haugen-6a442222a"
-                target="_blank"
-                className="group"
-              >
-                <Linkedin
-                  aria-label="linkedin icon link"
-                  className="h-8 w-8 text-muted-foreground group-hover:text-foreground transition duration-150 ease-in-out"
+                <TooltipContent sideOffset={8}>LinkedIn</TooltipContent>
+              </Tooltip>
+              <Tooltip>
+                <TooltipTrigger
+                  render={
+                    <a
+                      href="https://www.linkedin.com/in/jonas-lillebø-haugen-6a442222a"
+                      target="_blank"
+                      className="group"
+                    >
+                      <Linkedin
+                        aria-label="linkedin icon link"
+                        className="h-8 w-8 text-muted-foreground group-hover:text-foreground transition duration-150 ease-in-out"
+                      />
+                    </a>
+                  }
                 />
-              </a>
-              <a href="mailto:hello@threetides.dev" className="group">
-                <Mail
-                  aria-label="mail icon link"
-                  className="h-8 w-8 text-muted-foreground group-hover:text-foreground transition duration-150 ease-in-out"
+                <TooltipContent sideOffset={8}>Github</TooltipContent>
+              </Tooltip>
+              <Tooltip>
+                <TooltipTrigger
+                  render={
+                    <a href="mailto:hello@threetides.dev" className="group">
+                      <Mail
+                        aria-label="mail icon link"
+                        className="h-8 w-8 text-muted-foreground group-hover:text-foreground transition duration-150 ease-in-out"
+                      />
+                    </a>
+                  }
                 />
-              </a>
+                <TooltipContent sideOffset={8}>Email hello@threetides.dev</TooltipContent>
+              </Tooltip>
             </div>
           </div>
         </div>
