@@ -39,7 +39,7 @@ export const App: FC = () => {
                     </a>
                   }
                 />
-                <TooltipContent sideOffset={8}>LinkedIn</TooltipContent>
+                <TooltipContent sideOffset={8}>Github</TooltipContent>
               </Tooltip>
               <Tooltip>
                 <TooltipTrigger
@@ -56,7 +56,7 @@ export const App: FC = () => {
                     </a>
                   }
                 />
-                <TooltipContent sideOffset={8}>Github</TooltipContent>
+                <TooltipContent sideOffset={8}>LinkedIn</TooltipContent>
               </Tooltip>
               <Tooltip>
                 <TooltipTrigger
