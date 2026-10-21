@@ -1,4 +1,4 @@
-import { useState, type FC } from "react"
+import { type FC } from "react"
 import { Monitor, Moon, Sun } from "lucide-react"
 import { Threetides } from "@/assets/Threetides"
 import { useTheme, type Theme } from "@/components/theme-provider"
@@ -7,11 +7,9 @@ import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip
 
 export const Navbar: FC = () => {
   const { theme, setTheme } = useTheme()
-  const [value, setValue] = useState([theme])
 
   const handleChange = (theme: string | undefined) => {
     if (theme) {
-      setValue([theme as Theme])
       setTheme(theme as Theme)
     }
   }
@@ -25,7 +23,7 @@ export const Navbar: FC = () => {
         </div>
         <ToggleGroup
           variant="outline"
-          value={value}
+          value={[theme]}
           onValueChange={(theme) => handleChange(theme[0])}
         >
           <Tooltip>

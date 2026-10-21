@@ -77,9 +77,7 @@ export const App: FC = () => {
         <Separator />
         <section className="flex flex-col gap-8">
           <div className="flex flex-col gap-2">
-            <h2 className="text-3xl" id="projects">
-              Projects
-            </h2>
+            <h2 className="text-3xl">Projects</h2>
             <p className="text-muted-foreground text-sm">Some apps, some developer tools.</p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
@@ -125,7 +123,7 @@ export const App: FC = () => {
                 <span className="flex flex-col gap-2">
                   <h3 className="text-2xl">Havelle</h3>
                   <p className="text-sm text-muted-foreground">
-                    A local-first, lightweigh kanban board.
+                    A local-first, lightweight kanban board.
                   </p>
                 </span>
                 <span className="flex justify-between items-center">
@@ -189,11 +187,9 @@ export const App: FC = () => {
           </div>
         </section>
         <Separator />
-        <section id="about-name" className="flex flex-col gap-8">
+        <section className="flex flex-col gap-8">
           <div className="grid gap-4 sm:grid-cols-2">
-            <h3 className="text-2xl" id="projects">
-              About the name
-            </h3>
+            <h3 className="text-2xl">About the name</h3>
             <div className="flex flex-col gap-2">
               <i className="text-muted-foreground">
                 When the Moon rose in the Third Northern Hall I went to the Ninth Vestibule to
