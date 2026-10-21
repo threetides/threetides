@@ -1,5 +1,5 @@
 import type { FC } from "react"
-import { Threetides } from "@/assets/Threetides"
+import { Threetides } from "@/assets/threetides"
 
 const currentDate = new Date()
 const currentYear = currentDate.getFullYear()

@@ -1,16 +1,16 @@
 import { type FC } from "react"
 import { Monitor, Moon, Sun } from "lucide-react"
-import { Threetides } from "@/assets/Threetides"
-import { type Theme, useTheme } from "@/components/theme-provider"
+import { Threetides } from "@/assets/threetides"
+import { isTheme, useTheme } from "@/components/theme-provider"
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
 
 export const Navbar: FC = () => {
   const { theme, setTheme } = useTheme()
 
-  const handleChange = (theme: string | undefined) => {
-    if (theme) {
-      setTheme(theme as Theme)
+  const handleChange = (value: string | undefined) => {
+    if (value && isTheme(value)) {
+      setTheme(value)
     }
   }
 
@@ -24,7 +24,7 @@ export const Navbar: FC = () => {
         <ToggleGroup
           variant="outline"
           value={[theme]}
-          onValueChange={(theme) => handleChange(theme[0])}
+          onValueChange={(values) => handleChange(values[0])}
         >
           <Tooltip>
             <TooltipTrigger
