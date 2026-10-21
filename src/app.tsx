@@ -21,7 +21,7 @@ export const App: FC = () => {
             </h1>
             <p className="text-muted-foreground leading-relaxed">
               Threetides is an independent studio and a home for everything I build, from apps to
-              developer tools. Made with love in Norway.
+              developer tools.
             </p>
             <div className="flex gap-4">
               <Tooltip>
