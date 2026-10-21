@@ -18,7 +18,7 @@ export const Navbar: FC = () => {
     <nav className="border-b border-sidebar">
       <div className="flex items-center p-6 justify-between max-w-5xl m-auto">
         <div className="flex items-center gap-2">
-          <Threetides className="h-8 w-8" />
+          <Threetides aria-hidden="true" className="h-8 w-8" />
           <span className="text-xl">Threetides</span>
         </div>
         <ToggleGroup
