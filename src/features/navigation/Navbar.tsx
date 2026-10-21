@@ -1,9 +1,10 @@
 import { type FC } from "react"
 import { Monitor, Moon, Sun } from "lucide-react"
 import { Threetides } from "@/assets/Threetides"
-import { useTheme, type Theme } from "@/components/theme-provider"
+import { type Theme } from "@/components/theme-provider"
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
+import { useTheme } from "@/components/use-theme"
 
 export const Navbar: FC = () => {
   const { theme, setTheme } = useTheme()

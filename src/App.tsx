@@ -82,6 +82,7 @@ export const App: FC = () => {
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             <a
+              aria-label="Link to multe.app"
               href="https://multe.app"
               target="_blank"
               className="group theme-multe flex flex-col gap-4 p-4 border rounded-lg bg-card hover:border-chart-3 transition duration-300 ease-in-out relative overflow-hidden"
@@ -108,6 +109,7 @@ export const App: FC = () => {
             </a>
 
             <a
+              aria-label="Link to havelle.pages.dev"
               href="https://havelle.pages.dev"
               target="_blank"
               className="group theme-havelle flex flex-col gap-4 p-4 border rounded-lg bg-card hover:border-chart-3 transition duration-300 ease-in-out relative overflow-hidden"
@@ -134,6 +136,7 @@ export const App: FC = () => {
             </a>
 
             <a
+              aria-label="Link to github"
               href="https://github.com/threetides/tideauth"
               target="_blank"
               className="group theme-tideauth flex flex-col gap-4 p-4 border rounded-lg bg-card hover:border-chart-3 transition duration-300 ease-in-out relative overflow-hidden"
@@ -160,6 +163,7 @@ export const App: FC = () => {
             </a>
 
             <a
+              aria-label="Link to github"
               href="https://github.com/threetides/gonet"
               target="_blank"
               className="group theme-gonet flex flex-col gap-4 p-4 border rounded-lg bg-card hover:border-chart-3 transition duration-300 ease-in-out relative overflow-hidden"
